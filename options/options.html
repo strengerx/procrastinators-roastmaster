@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Procrastinator's Roastmaster - Settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>⚙️ Settings</h1>
+
+        <form id="settings-form">
+            <section>
+                <h2>Procrastination Thresholds</h2>
+                <div class="form-group">
+                    <label for="threshold">Warning threshold (minutes):</label>
+                    <input type="number" id="threshold" min="5" max="300" value="30">
+                </div>
+                <div class="form-group">
+                    <label for="escalation">Harsh roast threshold (minutes):</label>
+                    <input type="number" id="escalation" min="10" max="600" value="60">
+                </div>
+            </section>
+
+            <section>
+                <h2>Monitored Sites</h2>
+                <p>Check sites to monitor for procrastination:</p>
+                <div id="sites-list">
+                    <!-- Sites will be populated by JS -->
+                </div>
+            </section>
+
+            <section>
+                <h2>Notifications</h2>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="enable-notifications" checked>
+                        Enable browser notifications
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="enable-overlays" checked>
+                        Show overlay messages on sites
+                    </label>
+                </div>
+            </section>
+
+            <section>
+                <h2>Advanced Features</h2>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="real-time-roasting" checked>
+                        Enable real-time roasting (every 5+ minutes)
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="leaderboard-enabled" checked>
+                        Enable shame leaderboard
+                    </label>
+                </div>
+            </section>
+
+            <div class="actions">
+                <button type="submit">Save Settings</button>
+                <button type="button" id="reset-defaults">Reset to Defaults</button>
+            </div>
+        </form>
+
+        <div id="status-message"></div>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+
+</html>
