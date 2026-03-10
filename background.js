@@ -320,16 +320,6 @@ function initializeAchievements() {
     });
 }
 
-// Check if URL is a procrastination site
-function isProcrastinationSite(url) {
-    if (!url) return false;
-    try {
-        const domain = new URL(url).hostname.toLowerCase();
-        return PROCRASTINATION_SITES.some(site => domain.includes(site));
-    } catch (e) {
-        return false;
-    }
-}
 
 // Get today's date string
 function getTodayString() {
