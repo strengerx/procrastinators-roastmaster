@@ -17,7 +17,9 @@ const DEFAULT_SETTINGS = {
     sites: DEFAULT_SITES,
     enableNotifications: true,
     enableOverlays: true,
-    dataConsent: true
+    dataConsent: true,
+    realTimeRoasting: true,
+    leaderboardEnabled: true
 };
 
 document.addEventListener('DOMContentLoaded', () => {
